@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>惊喜</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ecd8f2;
+            font-family: Arial, sans-serif;
+        }
+        .password-box {
+            background-color: #deb9e9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="password"] {
+            padding: 10px;
+            width: 200px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #c68dd6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #a272b0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="password-box">
+    <input type="password" id="password" placeholder="good luck guessing~">
+    <button onclick="checkPassword()">try to get in!</button>
+</div>
+
+<script>
+    function checkPassword() {
+        const correctPassword = "yunie"; // Change this to your desired password
+        const enteredPassword = document.getElementById('password').value;
+
+        if (enteredPassword === correctPassword) {
+            window.location.href = "success.html"; // Redirect to the next page
+        } else {
+            alert("only my noëlie will get this, go away. hint for my wife; one of my fave nicknames!");
+        }
+    }
+</script>
+
+</body>
+</html>
