@@ -22,28 +22,31 @@
         }
         .container {
             display: flex;
-            align-items: center;
+            flex-direction: column; /* Default to column layout */
+            width: 100%; /* Full width */
+            max-width: 900px; /* Max width for larger screens */
             background-color: #deb9e9;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px; /* Add a margin to prevent the container from touching the top */
+            margin-top: 20px;
         }
-        .image-box {
-            margin-right: 20px;
-            border: 2px solid #ccc; /* Border color of the image box */
-            border-radius: 20px;
-            overflow: hidden; /* Ensures the image fits within the border */
-            text-align: center;
-            width: 100%; /* Image box takes up full width on mobile */
-        }
-        .image-box img {
-            display: block;
-            max-width: 300px; /* Adjust the size of the image as needed */
-            width: 100%; /* Image takes up full width of the container */
-            max-width: 300px; /* Max width to avoid becoming too big on large screens */
-            height: auto;
-        }
+.image-box {
+    margin-bottom: 20px; /* Space below the image */
+    overflow: hidden; /* Crop overflow */
+    width: 500px; /* Set a fixed width for the image box */
+    height: 350px; /* Set a fixed height for the image box */
+    align-self: center; /* Center the image box */
+    border-radius: 20px; /* Add rounded corners to the image box */
+}
+
+.image-box img {
+    display: block;
+    width: 100%; /* Fill the width of the image box */
+    height: 100%; /* Fill the height of the image box */
+    object-fit: cover; /* Cover the box without stretching */
+    border-radius: 20px; /* Add rounded corners to the image */
+}     
         .text-box {
             max-width: 850px; /* Adjust the width of the text box */
         }
