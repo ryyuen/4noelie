@@ -12,7 +12,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 125vh;
+            min-height: 125vh;
+            margin: 0;
+            padding-top: 50px; /* Add padding at the top of the body */
             background-color: #ecd8f2;
             font-family: Arial, sans-serif; /* Default font */
             transform: scale(0.75); /* Default scaling */
@@ -25,16 +27,21 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px; /* Add a margin to prevent the container from touching the top */
         }
         .image-box {
             margin-right: 20px;
             border: 2px solid #ccc; /* Border color of the image box */
             border-radius: 20px;
             overflow: hidden; /* Ensures the image fits within the border */
+            text-align: center;
+            width: 100%; /* Image box takes up full width on mobile */
         }
         .image-box img {
             display: block;
             max-width: 300px; /* Adjust the size of the image as needed */
+            width: 100%; /* Image takes up full width of the container */
+            max-width: 300px; /* Max width to avoid becoming too big on large screens */
             height: auto;
         }
         .text-box {
@@ -50,7 +57,7 @@
     </style>
 </head>
 <body>
-
+	
 <div class="container">
     <div class="image-box">
         <img src="your-image.png" alt="Your Image"> <!-- Change 'your-image.png' to your image file -->
